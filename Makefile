@@ -1,7 +1,10 @@
+GOOS=linux
+GOARCH=amd64
+
 all:	route53-ddns
 
 route53-ddns:	route53-ddns.go
-	go build $<
+	env GOOS=$(GOOS) GOARCH=$(GOARCH) go build $<
 
 clean:	
 
