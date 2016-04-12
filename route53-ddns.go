@@ -18,7 +18,7 @@ import (
     "github.com/op/go-logging"
 )
 
-var logFileName = "dyndns.log"
+var logFileName = "route53.log"
 var configFileName = "config.json"
 var log = logging.MustGetLogger("dyndns")
 var format = logging.MustStringFormatter(
