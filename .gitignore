@@ -1,3 +1,4 @@
 *.json
 *.log
 dyndns_route53
+route53-ddns
