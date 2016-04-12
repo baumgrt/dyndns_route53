@@ -6,9 +6,10 @@ all:	route53-ddns
 route53-ddns:	route53-ddns.go
 	env GOOS=$(GOOS) GOARCH=$(GOARCH) go build $<
 
-clean:	
+clean:
+	rm -f route53-ddns
 
 distclean:	clean
-	rm route53-ddns
+	rm -f route53.log
 
 .PHONY:	all clean distclean
