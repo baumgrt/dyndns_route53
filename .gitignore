@@ -1,4 +1,6 @@
 *.json
 *.log
+*.html
+*.pdf
 dyndns_route53
 route53-ddns
