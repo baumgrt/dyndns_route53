@@ -21,7 +21,7 @@ import (
 var logFileName = "route53.log"
 var configFileName = "config.json"
 var log = logging.MustGetLogger("dyndns")
-var format = logging.MustStringFormatter(
+var logFormat = logging.MustStringFormatter(
     `%{time:2006-01-02 15:04:05}   %{level:.5s}:	%{message}`,
 )
 
@@ -58,7 +58,7 @@ func main() {
 
     // Log settings
     loggingBackend   := logging.NewLogBackend(logFile, "", 0)
-    backendFormatter := logging.NewBackendFormatter(loggingBackend, format)
+    backendFormatter := logging.NewBackendFormatter(loggingBackend, logFormat)
     backendLeveled   := logging.AddModuleLevel(backendFormatter)
 
     backendLeveled.SetLevel(logging.DEBUG, "")
