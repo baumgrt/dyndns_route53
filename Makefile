@@ -3,7 +3,7 @@ GOARCH=amd64
 
 PANDOC_ARGS=-f markdown_github-hard_line_breaks --normalize
 
-all:	binary pdfdoc
+all:	binary
 
 binary:	route53-ddns
 
