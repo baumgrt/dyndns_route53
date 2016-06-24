@@ -28,12 +28,12 @@ updatedeps:
 	go get -u github.com/op/go-logging/...
 
 clean:
-	rm -f route53-ddns
+	rm -f README.html
 	rm -f README.pdf
+	rm -f route53.log
 
 distclean:	clean
-	rm -f route53.log
-	rm -f README.html
+	rm -f route53-ddns
 
 
 .PHONY:	all binary clean distclean docs htmldoc pdfdoc updatedeps
