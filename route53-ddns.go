@@ -61,7 +61,8 @@ func main() {
     backendFormatter := logging.NewBackendFormatter(loggingBackend, logFormat)
     backendLeveled   := logging.AddModuleLevel(backendFormatter)
 
-    backendLeveled.SetLevel(logging.DEBUG, "")
+    // Level in logging.ERROR, logging.INFO, logging.DEBUG
+    backendLeveled.SetLevel(logging.INFO, "")
     logging.SetBackend(backendLeveled)
 
     perror(err, log)
